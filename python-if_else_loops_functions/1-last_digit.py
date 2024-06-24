@@ -7,6 +7,10 @@ number = random.randint(-10000, 10000)
 # Calculate the last digit of the number
 last_digit = abs(number) % 10
 
+# Determine the sign of the last digit based on the original number
+if number < 0:
+    last_digit *= -1
+
 # Print the result based on the last digit
 print(f"Last digit of {number} is {last_digit}", end=" ")
 
