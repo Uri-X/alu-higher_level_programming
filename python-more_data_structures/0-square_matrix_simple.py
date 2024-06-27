@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Function to compute square values of integers in a matrix
 def square_matrix_simple(matrix):
     # Create a new matrix to store squared values
