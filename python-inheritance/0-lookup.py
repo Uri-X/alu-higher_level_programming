@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 This module provides a function to retrieve the list of available attributes
 and methods of an object.
