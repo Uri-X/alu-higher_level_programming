@@ -7,6 +7,7 @@ attribute for size, with validation, and methods to calculate the area,
 get/set the size attribute, and print the square.
 """
 
+
 class Square:
     """
     A class that represents a square.
