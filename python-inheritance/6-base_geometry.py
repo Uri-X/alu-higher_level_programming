@@ -5,11 +5,11 @@ Module: base_geometry
 This module defines the BaseGeometry class.
 """
 
+
 class BaseGeometry:
     """
     A base class for geometry operations.
     """
-
 
     def area(self):
         """
