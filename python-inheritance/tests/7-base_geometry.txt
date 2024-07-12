@@ -1,0 +1,36 @@
+# test_base_geometry.py
+
+import unittest
+from io import StringIO
+from contextlib import redirect_stdout
+from base_geometry import BaseGeometry  # Assuming your module is named base_geometry
+
+class TestBaseGeometry(unittest.TestCase):
+    
+    def test_area(self):
+        geom = BaseGeometry()
+        with self.assertRaises(Exception) as cm:
+            geom.area()
+        self.assertEqual(str(cm.exception), "area() is not implemented")
+
+    def test_integer_validator(self):
+        geom = BaseGeometry()
+        
+        # Test valid integer
+        try:
+            geom.integer_validator("test", 10)
+        except (TypeError, ValueError) as e:
+            self.fail(f"integer_validator raised {type(e).__name__} unexpectedly!")
+
+        # Test non-integer
+        with self.assertRaises(TypeError) as cm:
+            geom.integer_validator("test", "string")
+        self.assertEqual(str(cm.exception), "test must be an integer")
+
+        # Test zero or negative integer
+        with self.assertRaises(ValueError) as cm:
+            geom.integer_validator("test", 0)
+        self.assertEqual(str(cm.exception), "test must be greater than 0")
+
+if __name__ == "__main__":
+    unittest.main()
