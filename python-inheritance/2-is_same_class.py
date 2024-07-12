@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module provides a function to check if an object is exactly an instance of a specified class.
+function to check if an object is exactly an instance of a specified class.
 """
 
 
