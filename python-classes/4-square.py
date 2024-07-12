@@ -7,6 +7,7 @@ attribute for size, with validation, and methods to calculate the area and
 get/set the size attribute.
 """
 
+
 class Square:
     """
     A class that represents a square.
@@ -14,6 +15,7 @@ class Square:
     Attributes:
         __size (int): The size of the square.
     """
+
 
     def __init__(self, size=0):
         """
