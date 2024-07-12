@@ -10,6 +10,7 @@ class BaseGeometry:
     A base class for geometry operations.
     """
 
+
     def area(self):
         """
         Raises an exception with a message indicating that
