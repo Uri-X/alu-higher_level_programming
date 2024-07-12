@@ -5,6 +5,7 @@ Module: type_checker
 This module provides functions for type checking in Python.
 """
 
+
 def is_kind_of_class(obj, a_class):
     """
     Checks if `obj` is an instance of, or if it is an instance of
