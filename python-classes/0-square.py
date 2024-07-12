@@ -2,12 +2,13 @@
 """
 Square Class
 
-This class represents a square, although it currently doesn't have any functionality.
+class represents a square, without functionality.
 Attributes:
     None
 Methods:
     None
 """
+
 
 class Square:
     """
