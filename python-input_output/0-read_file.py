@@ -9,7 +9,7 @@ def read_file(filename=""):
     Reads (UTF8) and prints it to stdout.
 
     Args:
-        filename (str): The name of the file to read. Defaults to an empty string.
+        filename (str): name of file. Defaults to an empty string.
 
     Returns:
         None
