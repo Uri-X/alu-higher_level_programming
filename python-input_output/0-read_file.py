@@ -1,15 +1,24 @@
 #!/usr/bin/python3
 """
-This module contains a function to read a text file and print its content to stdout.
+Module that provides a function to read a text file and print its content.
 """
 
 def read_file(filename=""):
     """
-    Reads a UTF8 text file and prints its content to stdout.
-
+    Reads a text file (UTF8) and prints it to stdout.
+    
     Args:
-        filename (str): The path to the text file to be read. Defaults to an empty string.
+        filename (str): The name of the file to read. Defaults to an empty string.
+    
+    Returns:
+        None
     """
-    with open(filename, "r", encoding="utf-8") as file:
-        content = file.read()
-        print(content)
+    with open(filename, 'r', encoding='utf-8') as f:
+        print(f.read(), end='')
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:
+        read_file(sys.argv[1])
+    else:
+        print("Usage: ./read_file.py <filename>")
