@@ -1,11 +1,17 @@
 #!/usr/bin/node
-// script that reads and prints the content of a file
+// Import the 'fs' (File System) module
 const fs = require('fs');
-const myArgs = process.argv.slice(2);
-fs.readFile(myArgs[0], 'utf-8', function (err, data) {
+
+// Get command line arguments
+const filePath = process.argv[2];
+const content = process.argv[3];
+
+// Write the content to the specified file
+fs.writeFile(filePath, content, 'utf8', (err) => {
   if (err) {
-    console.log(err);
+    console.error("An error occurred:", err); // Print the error if any occurs
   } else {
-    console.log(data);
+    console.log("File written successfully!");
   }
 });
+
